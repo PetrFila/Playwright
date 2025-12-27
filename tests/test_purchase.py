@@ -24,6 +24,3 @@ def test_checkout_page(page):
     add_product(page, True)
 
     expect(page.locator("[data-test='title']")).to_have_text("Your Cart")
-
-
-
