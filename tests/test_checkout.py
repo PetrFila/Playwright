@@ -12,8 +12,7 @@ def add_product(page):
 
 # This uses the logged_in_page fixture from the conftest.py file which Pytest automatically handles.
 # There is no need to import anything.
-def test_checkout_page(logged_in_page):
-    page = logged_in_page
+def test_checkout_page(page):
     add_product(page)
 
     expect(page.locator("[data-test='title']")).to_have_text("Your Cart")
