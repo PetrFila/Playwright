@@ -10,7 +10,7 @@ def add_product(page):
     product_page.click_add_item_to_cart("t_shirt")
     product_page.click_shopping_cart_link()
 
-# This uses the logged_in_page fixture from the conftest.py file which Pytest automatically handles.
+# This uses the global_login fixture from the conftest.py file which Pytest automatically handles.
 # There is no need to import anything.
 def test_checkout_page(page):
     add_product(page)
