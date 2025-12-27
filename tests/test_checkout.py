@@ -5,6 +5,7 @@ from models.checkout_page import CheckoutPage
 
 
 def add_product(page):
+    page.goto("https://www.saucedemo.com/inventory.html")
     product_page = ProductsPage(page)
     product_page.click_add_item_to_cart("backpack")
     product_page.click_add_item_to_cart("t_shirt")
