@@ -5,8 +5,6 @@ from models.login_page import LoginPage
 
 # Define where to save the cookies
 STORAGE_STATE = "state.json"
-
-
 @pytest.fixture(scope="session")
 def global_login(browser_type: BrowserType):
     """

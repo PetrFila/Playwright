@@ -29,4 +29,4 @@ This repository contains an automated test suite for the [SauceDemo](https://www
 
 **Run all tests:**
 ```bash
-python -m pytest
+python -m pytest -v

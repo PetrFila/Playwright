@@ -4,7 +4,6 @@ from playwright.sync_api import Page
 class ProductsPage:
     def __init__(self, page: Page):
         self.page = page
-
         self.backpack_add_button = page.locator("[data-test='add-to-cart-sauce-labs-backpack']")
         self.t_shirt_add_button = page.locator("[data-test='add-to-cart-sauce-labs-bolt-t-shirt']")
         self.shopping_cart_link = page.locator("[data-test='shopping-cart-link']")

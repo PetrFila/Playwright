@@ -2,9 +2,9 @@ name: Playwright Tests
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main, feature/* ] # Runs on main AND any feature branch ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main ]
 
 jobs:
   test:
@@ -35,7 +35,7 @@ jobs:
 
     # 5. Run the tests!
     - name: Run Playwright tests
-      run: python -m pytest
+      run: python -m pytest -v
 
     # 6. Save the report (Trace Viewer) if tests fail
     - uses: actions/upload-artifact@v4
